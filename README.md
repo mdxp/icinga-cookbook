@@ -1,10 +1,16 @@
-= DESCRIPTION:
+# <a name="title"></a> icinga-cookbook [![Build Status](https://secure.travis-ci.org/mdxp/icinga-cookbook.png)](http://travis-ci.org/mdxp/icinga-cookbook)
 
-= REQUIREMENTS:
+DESCRIPTION:
+===========
 
-= ATTRIBUTES: 
+REQUIREMENTS:
+===========
 
-= USAGE:
+ATTRIBUTES:
+===========
+
+USAGE:
+======
 
 Some caveats at the moment:
 
