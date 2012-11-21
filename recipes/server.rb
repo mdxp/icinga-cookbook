@@ -24,7 +24,7 @@ include_recipe "apache2::mod_rewrite"
 include_recipe "icinga::plugins_package"
 include_recipe "icinga::core_source"
 
-sysadmins = search(:users, "groups:#{node['icinga']['sysadmin']}")
+sysadmins = search(:users, "groups:#{node['icinga']['sysadmin']} AND icinga_email:*")
 nodes = search(:node, "hostname:[* TO *] AND chef_environment:#{node.chef_environment}")
 
 if nodes.empty?
