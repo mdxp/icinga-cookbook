@@ -52,7 +52,7 @@ bash "compile-install-icinga" do
   code <<-EOH
     tar -zxf icinga-#{version}.tar.gz && \
     cd icinga-#{version} && \
-    ./configure --with-icinga-user=#{iuser} --with-icinga-group=#{igroup} --with-nagios-user=#{iuser} --with-nagios-group=#{igroup} \
+    ./configure --with-icinga-user=#{iuser} --with-icinga-group=#{igroup} \
     --with-command-user=#{iuser} --with-command-group=#{igroup} --prefix #{node['icinga']['prefix']} --enable-idoutils --enable-ssl && \
     make all && \
     make fullinstall
