@@ -55,7 +55,8 @@ bash "compile-install-icinga" do
     ./configure \
       --with-icinga-user=#{iuser} --with-icinga-group=#{igroup} \
       --with-command-user=#{iuser} --with-command-group=#{igroup} \
-      --prefix #{node['icinga']['prefix']} --enable-idoutils --enable-ssl && \
+      --with-ssl-lib=/usr/lib/${HOSTTYPE}-linux-gnu/ --enable-ssl \
+      --prefix #{node['icinga']['prefix']} --enable-idoutils && \
     make all && \
     make fullinstall
   EOH
