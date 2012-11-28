@@ -22,5 +22,9 @@
    package pkg
 end
 
-package "nagios-nrpe-plugin"
+package "nagios-nrpe-plugin" do
+  # Required so we don't install nagios3 (and thus apache2+php5) - see http://packages.ubuntu.com/de/precise/nagios-nrpe-plugin
+  options "--no-install-recommends"
+  action :install
+end
 
