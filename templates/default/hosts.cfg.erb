@@ -11,6 +11,14 @@ define host {
 <% else -%>
   hostgroups <%= n.run_list.roles.to_a.join(",") %>
 <% end -%>
+<% if n.has_key? 'icinga' %>
+  <% if n['icinga'].has_key? 'additional_contacts' %>
+  contacts <%= n['icinga']['additional_contacts'].join(",") %>
+  <% end %>
+  <% if n['icinga'].has_key? 'additional_contact_groups' %>
+  contactgroups <%= n['icinga']['additional_contact_groups'].join(",") %>
+  <% end %>
+<% end %>
 }
 
 <% end -%>
