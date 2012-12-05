@@ -1,5 +1,5 @@
-default['icinga']['version'] = "1.4.2"
-default['icinga']['checksum'] = "506022493295bda95aa2514bfdc3196063ed936655bc60068f61543504b42aa6"
+default['icinga']['version'] = "1.8.1"
+default['icinga']['checksum'] = "3d02d80bdefc2518ab8517be6930a518b77747e0243fa594731fb1f95dbab916"
 default['icinga']['prefix'] = "/usr/local/icinga"
 
 default['icinga']['sysadmin_email'] = "root@localhost"
