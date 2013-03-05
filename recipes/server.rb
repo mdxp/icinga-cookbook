@@ -38,6 +38,10 @@ sysadmins.each do |s|
   members << s['id']
 end
 
+if node.expand!.recipes.include?('icinga::pagerduty')
+  members << 'pagerduty'
+end
+
 role_list = Array.new
 service_hosts= Hash.new
 search(:role, "*:*") do |r|
