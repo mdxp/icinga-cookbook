@@ -1,3 +1,4 @@
 source "https://rubygems.org"
 
 gem "chefspec", "~>0.9.0"
+gem 'chef', '~> 10.0'
